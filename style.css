@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  background: url('https://media.giphy.com/media/VrSWLFiMAnD7esQjXy/giphy.gif') 10% 10% / contain no-repeat ;
+  background-color:  #101942;
+  font-family: Nunito, sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+
+.container {
+  position: absolute;
+  top: 35%;
+  right: 10%;
+  transform: translate(-50% -50%);
+  background-color: rgb(255 255 255 / 80%);
+  border-radius: 1rem;
+  padding: 3rem;
+  max-width: 600px;
+  min-height: 301px;
+  overflow: hidden;
+}
+
+@media  screen and (max-width: 700px) {
+  body {
+    background:url('https://media.giphy.com/media/VrSWLFiMAnD7esQjXy/giphy.gif') 0% 0% / contain no-repeat ;
+    background-color: #101942;
+  }
+
+  .container {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 30%;
+    max-width: unset;
+    max-width: 500px;
+    height: 50vh;
+    padding: 1rem;
+  }
+
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 2.75rem;
+}
+
+.container label, .form-control, .btn {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.form-control {
+  margin-bottom: 2rem;
+  border-radius: 1.5rem;
+}
+
+.btn {
+  border-radius: 1.5rem;
+  background-color: rgb(53, 208, 255);
+  width: 100%;
+  text-transform: uppercase;
+  margin-top: 3rem;
+  font-weight: bold;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn:active {
+  transform: scale(.99);
+}
+
+.btn:hover {
+ font-size: 1.8rem;
+ transition: font-size 0.2s ease;
+}
+
+/* Countdown Container */
+
+.countdown-container ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.countdown-container li {
+  display: inline-block;
+  padding: 0;
+  font-size: 2rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.countdown-container span {
+  font-size: 3.2rem;
+}
+
+.complete-title {
+  animation: complete 4s infinite;
+}
+
+@keyframes complete {
+  0% {
+    color: rgb(238, 20, 20);
+  }
+
+  25% {
+    color: rgb(238, 234, 20);
+  }
+
+  50% {
+    color: rgb(38, 238, 20);
+    transform: scale(1.5);
+  }
+
+  75% {
+    color: rgb(20, 89, 238);
+  }
+
+  100% {
+    color: rgb(151, 20, 238);
+  }
+}
